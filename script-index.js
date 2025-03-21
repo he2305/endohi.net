@@ -77,7 +77,7 @@ window.addEventListener('load', function(){
     proftext1.style.scale = 1;
   }, nexttime)
 
-  /* "Michael Li" stroke appears */
+  /* "Hiroki Endo" stroke appears */
   nexttime = nexttime + 200;
   setTimeout(function() {
     logo.forEach((letter, i) => {
@@ -92,7 +92,7 @@ window.addEventListener('load', function(){
     }, 70*i)
   }
 
-  /* "Michael Li" fill appears */
+  /* "Hiroki Endo" fill appears */
   nexttime = nexttime + 1050;
   setTimeout(function() {
     proftitle.style.fill = 'black';
