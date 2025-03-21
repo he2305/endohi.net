@@ -1,0 +1,417 @@
+/*
+==============
+=== CURSOR ===
+==============
+*/
+@media (width <= 768px) {
+  input, textarea, button, select, a, div {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body, body button, body a {
+    cursor: auto;
+  }
+  .cursor {
+    visibility: hidden;
+  }
+}
+/*
+===============
+=== NAV BAR ===
+===============
+*/
+@media (768px <= width <= 1100px) {
+  nav li a:before {
+    width: 40px;
+  }
+}
+
+@media (600px <= width <= 768px) {
+  nav ul li a {
+    font-size: 11px;
+  }
+  nav li a:after {
+    font-size: 0.6rem;
+  }
+  nav li a:before {
+    width: 10px;
+  }
+  .open-overlay {
+    right: 1.8rem;
+  }
+}
+
+@media (width <= 600px) {
+  nav ul li a {
+    font-size: 11px;
+  }
+  nav li a:after {
+    font-size: 0.6rem;
+  }
+  nav li a:before {
+    width: 5px;
+  }
+}
+
+/*
+====================
+=== FANCY BUTTON ===
+====================
+*/
+@media (width <= 768px) {
+  .prof-btn1, .prof-btn2, .button-shadow {
+    transform: scale(0.8);
+  }
+  .profile-btn-container {
+    gap: 0;
+  }
+  .button:hover .button-shadow {
+    transform: translate(-0.3rem, 0.3rem);
+    transform: scale(0.8);
+  }
+  .button:active {
+    transform: scale(0.8);
+  }
+
+  .button__star-1 {
+    width:15px;
+    top: -5px;
+    left: 10px;
+  }
+  .button__star-2 {
+    width: 20px;
+    right: 2px;
+    top: 7px;
+  }
+  .button__circle-1 {
+    width: 9px;
+    top: 0px;
+    left: 58px;
+  }
+  .button__circle-2 {
+    width: 8px;
+    right: 34px;
+    bottom: -8px;
+  }
+  .button:hover .button__circle-2 {
+    transform: translate(-5px, 5px) scale(1.1);
+  }
+  .button__diamond {
+    width: 18px;
+    top: -18px;
+    right: 52px;
+  }
+  .button__triangle {
+    width: 20px;
+    left: 25px;
+    bottom: -10px;
+  }
+}
+/*
+=======================
+=== PROFILE SECTION ===
+=======================
+*/
+@media (768px <= width <= 1100px) {
+  .profile-text1, .profile-text2 {
+  font-size: 0.85em;
+  }
+  .profile-text-container {
+  padding-bottom: 20px;
+  }
+  .profile-title {
+  scale: 0.85;
+  }
+  .profile-spacer-div1 {
+  height: 5px;
+  }
+  .profile-spacer-div2 {
+  height: 15px;
+  }
+}
+
+@media (width <= 768px) {
+  .profile-text1, .profile-text2 {
+  font-size: 0.75em;
+  }
+  .profile-text-container {
+  padding-bottom: 10px;
+  }
+  .profile-title {
+  scale: 0.7;
+  }
+  .profile-spacer-div1 {
+  height: 0;
+  }
+  .profile-spacer-div2 {
+  height: 0;
+  }
+}
+
+@media (width <= 570px) {
+  .profile-text1, .profile-text2 {
+  font-size: 0.7em;
+  }
+  .profile-text-container {
+  padding-bottom: 10px;
+  }
+  .profile-title {
+  scale: 0.55;
+  }
+  .profile-spacer-div1 {
+  height: 0;
+  }
+  .profile-spacer-div2 {
+  height: 0;
+  }
+}
+
+
+/*
+====================================
+=== ABOUT ME SECTION (HOME PAGE) ===
+====================================
+*/
+@media (768px <= width <= 1100px) {
+    .about-me-page {
+      height: auto;
+    }
+    .am-header {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .intro-container {
+      width: 80%;
+    }
+    .title-text {
+      font-size: 40px;
+      text-align: center;
+    }
+    .body-text {
+      width: 90%;
+      align-self: center;
+    }
+    .ring {
+      width: 350px;
+      height: 350px;
+      margin-bottom: 200px;
+    }
+    .prof-slider-wrapper {
+      width: 200px;
+      height: 200px;
+    }
+}
+
+@media (width <= 768px) {
+    .about-me-page {
+      height: auto;
+    }
+    .am-header {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .intro-container {
+      width: 80%;
+    }
+    .title-text {
+      font-size: 28px;
+      text-align: center;
+    }
+    .body-text {
+      width: 90%;
+      align-self: center;
+    }
+    .ring {
+      width: 350px;
+      height: 350px;
+      margin-bottom: 200px;
+    }
+    .prof-slider-wrapper {
+      width: 200px;
+      height: 200px;
+    }
+}
+
+/*
+===============================
+=== Work Experience Section ===
+===============================
+*/
+
+@media screen and (768px <= width <= 1100px) {
+  .we-header {
+    flex-direction: column-reverse;
+  }
+  .work-experience-page {
+    height: auto;
+  }
+  .exp-container {
+    max-width: 80%;
+  }
+  .we-header {
+    gap: 1rem;
+  }
+  .exp-container {
+    margin-top: 1rem;
+  }
+  .exp-title {
+    font-size: 40px;
+    text-align: center;
+    align-self: center;
+    width: 80%;
+    margin-bottom: .5rem;
+  }
+  .em-muscle {
+    font-size: 1.4rem;
+  }
+  .timeline-container {
+    margin: 0;
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    margin: 5vh 0 10vh 0;
+    overflow-y: visible;
+    mask-image: none;
+  }
+  .timeline {
+    width: 100%;
+  }
+  .timeline ul {
+    max-height: 100vh;
+  }
+}
+
+@media(width <= 768px){
+  .we-header {
+    flex-direction: column-reverse;
+  }
+  .work-experience-page {
+    height: auto;
+  }
+  .exp-container {
+    max-width: 80%;
+  }
+  .we-header {
+    gap: 1rem;
+  }
+  .exp-container {
+    margin-top: 1rem;
+  }
+  .exp-title {
+    font-size: 30px;
+    text-align: center;
+    align-self: center;
+    width: 80%;
+    margin-bottom: .5rem;
+  }
+  .em-muscle {
+    font-size: 1.1rem;
+  }
+  .timeline-container {
+    margin: 0;
+    width: 90%;
+    height: auto;
+    max-width: 100%;
+    margin: 5vh 0 10vh 0;
+    overflow-y: visible;
+    mask-image: none;
+  }
+  .timeline {
+    width: 100%;
+    margin-top: 150px;
+  }
+
+  /* Timeline Specific Changes */
+  .timeline{
+    padding-bottom:0;
+  }
+  .timeline:before{
+    left:20px;
+    top: 60px;
+  }
+  .timeline ul li:nth-child(odd),
+  .timeline ul li:nth-child(even)
+  {
+    width:100%;
+    text-align:left;
+    padding-left:50px;
+    padding-bottom:50px;
+  }
+  .timeline ul li:nth-child(odd):before,
+  .timeline ul li:nth-child(even):before
+  {
+    top:-18px;
+    left:16px;
+  }
+  .timeline ul li:nth-child(odd) .time,
+  .timeline ul li:nth-child(even) .time{
+    top:-30px;
+    left:50px;
+    right:inherit;
+  }
+}
+
+
+
+/*
+=====================
+=== ABOUT ME PAGE ===
+=====================
+*/
+@media screen and (max-width: 768px) {
+  .about-text-container {
+    width: 80%;
+  }
+  .section-container {
+    flex-direction: column;
+  }
+  .title-container {
+    width: 100%;
+  }
+  .content-container {
+    width: 100%;
+  }
+}
+
+
+/*
+=====================
+=== PROJECTS PAGE ===
+=====================
+*/
+@media (width <= 768px) {
+  .navbar-background {
+    flex-direction: column;
+    height: 140px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+  }
+  .project-tab {
+    width: 250px;
+  }
+  .project-tab p {
+    font-size: 1.2em;
+  }
+  .project-container {
+    top: 220px;
+  }
+}
+
+/*
+====================
+=== CONTACT PAGE ===
+====================
+*/
+@media (width <= 768px) {
+  .contact-form h2 {
+    font-size: 2.75rem;
+  }
+  .contact-inputs {
+    align-self: center;
+    width: 350px;
+  }
+  .contact-button{
+    width: 350px;
+  }
+}

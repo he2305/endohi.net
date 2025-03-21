@@ -1,0 +1,305 @@
+/* 
+===============
+=== GENERAL === 
+===============
+*/
+
+html{
+scroll-snap-type: none;
+scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+display: none;
+}
+
+p, h1, h2, h3, span, a, img, li, ul{
+-webkit-user-select: none; /* Safari */
+-ms-user-select: none; /* IE 10 and IE 11 */
+user-select: none; /* Standard syntax */
+}
+
+p, h1, h2, h3, span, i, a{
+  color: var(--dark-color);
+}
+
+/* 
+=======================
+=== CONTENT STYLING === 
+=======================
+*/
+.starting-page {
+  background: var(--secondary-color);
+  height: auto;
+}
+
+.about-text-container {
+  position: relative;
+  margin: auto;
+  padding-top: 18vh;
+  display: flex;
+  flex-direction: column;
+  gap: 6vh;
+  margin-bottom: 3vh;
+  width: 50%;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  position: relative;
+
+}
+
+.title-container {
+  width: 25%;
+
+}
+
+.title-container hr {
+  border: none;
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark-color);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.title-container h2 {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.content-container {
+  width: 70%;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  line-height: 1.5rem;
+}
+
+.content-container a{
+  text-decoration: underline;
+  text-underline-offset: .4vh;
+  text-decoration-color: var(--accent-color);
+  border-radius: 1px;
+}
+
+.content-container a:hover{
+  background-color: var(--accent-color);
+  color: rgb(255, 248, 240);
+}
+
+/* Course Accordion */
+.course-list {
+  padding-bottom: 1rem;
+  cursor: pointer; 
+}
+
+.course-list .year {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-list .year h3 {
+  text-decoration: underline;
+  text-underline-offset: .5vh;
+  color: var(--dark-color);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.course-list:hover h3 {
+  color: var(--accent-color);
+}
+
+.course-list .year i {
+  font-size: 1.5rem;
+  transition: transform 0.4s ease-in-out;
+}
+
+.courses {
+  height: 0;
+  overflow: hidden;
+  transition: height .25s ease-in-out;
+}
+
+.courses p {
+  font-size: .9rem;
+}
+
+.course-list.active .courses {
+  overflow: auto;
+  animation: course-fade .25s ease-in-out;
+}
+
+.course-list.active i {
+  transform: rotate(180deg);
+}
+
+.course-list.active h3 {
+  color: var(--accent-color);
+}
+
+@keyframes course-fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* 
+====================
+=== IMAGE SLIDER ===
+====================
+*/
+.slider{
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 8% 92%,
+      transparent);
+}
+
+.slider .list{
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+
+.slider .list .item{
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun var(--time) linear infinite;
+  transition: filter 0.5s ease,
+              opacity 0.5s ease;
+  animation-delay: calc( (var(--time) / var(--quantity)) * (var(--position) - 1) )!important;
+}
+
+.slider .list .item img{
+  width: 100%;
+  border-radius: 1rem;
+}
+
+@keyframes autoRun{
+  from{
+      left: 100%;
+  }to{
+      left: calc(var(--width) * -1);
+  }
+}
+
+.slider:hover .item{
+  animation-play-state: paused!important;
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.slider .item:hover{
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.slider[reverse="true"] .item{
+  animation: reversePlay var(--time) linear infinite;
+}
+@keyframes reversePlay{
+  from{
+      left: calc(var(--width) * -1);
+  }to{
+      left: 100%;
+  }
+}
+
+/* 
+====================
+=== WORD SLIDER ===
+====================
+*/
+.scroll-text {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg,transparent,#fff 8%,#fff 92%,transparent);
+}
+
+.scroll-text div {
+  display: flex;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  animation: RightToLeft var(--t) infinite linear;
+  animation-delay: calc(var(--t)*-1);
+}
+
+.scroll-text div:nth-child(2){
+  animation: RightToLeft2 var(--t) infinite linear;
+  animation-delay: calc(var(--t)/-2);
+}
+
+@keyframes RightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes RightToLeft2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.scroll-text span {
+  display: inline-flex;
+  margin: 20px;
+  font-size: 4em;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.scroll-text span i{
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1em;
+  margin-left: 10px;
+}
+
+.spacer {
+  width: 100%;
+  height: 2vh;
+}
+
+.spacer.bot {
+  height: 10vh;
+}
+
+
+/* 
+==================
+=== COPYRIGHTS ===
+==================
+*/
+footer {
+  height: 3vh;
+  background-color: var(--secondary-color);
+}
