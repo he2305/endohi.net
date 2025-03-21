@@ -55,7 +55,7 @@ window.addEventListener('load', function(){
   const scroll_letter = document.querySelectorAll(".wavy-scroll span");
   const downarrow = document.querySelector(".down-arrow");
 
-  const starttime = 2000;
+  const starttime = 1000;
   /* Initialize svg letters */
   proftitle.style.filter = "invert(5%) sepia(0%) saturate(942%) hue-rotate(223deg) brightness(111%) contrast(77%);"
   for (let i=0; i<logo.length; i++) {
@@ -68,15 +68,15 @@ window.addEventListener('load', function(){
 
   /* "Hi, I am" appears */
   setTimeout(function() {
-    // proftext1.style.opacity = 1;
-    proftext1.style.transform = "scale(1)";
+    proftext1.style.opacity = 1;
+    // proftext1.style.transform = "scale(1)";
   }, starttime)
 
   /* "Hi, I am" Shrinks */
   nexttime = starttime + 1200;
   setTimeout(function() {
-    // proftext1.style.scale = 1;
-    proftext1.style.transform = "scale(1)";
+    proftext1.style.scale = 1;
+    // proftext1.style.transform = "scale(1)";
   }, nexttime)
 
   /* "Hiroki Endo" stroke appears */
