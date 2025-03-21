@@ -68,13 +68,15 @@ window.addEventListener('load', function(){
 
   /* "Hi, I am" appears */
   setTimeout(function() {
-    proftext1.style.opacity = 1;
+    // proftext1.style.opacity = 1;
+    proftext1.style.transform = "scale(1)";
   }, starttime)
 
   /* "Hi, I am" Shrinks */
   nexttime = starttime + 1200;
   setTimeout(function() {
-    proftext1.style.scale = 1;
+    // proftext1.style.scale = 1;
+    proftext1.style.transform = "scale(1)";
   }, nexttime)
 
   /* "Hiroki Endo" stroke appears */
